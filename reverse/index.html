@@ -1,0 +1,20 @@
+<script>
+
+let isPalindrome = function (word) {
+	let len = word.length;
+
+	// split string into halfs, rounding down if remainder
+	let begin = word.substring(0, Math.floor(len/2));
+	let end = word.substring(len - Math.floor(len/2), len);
+		
+	// convert to array, reverse sequence, then back to string
+	let flip = end.split('').reverse().join('');
+
+	// compare character sequences in lowercase
+	return (begin.toLowerCase() === flip.toLowerCase());
+}
+
+alert( 'kayak: '+isPalindrome('kayak') );
+alert( 'kayakk: '+isPalindrome('kayakk') );
+
+</script>
