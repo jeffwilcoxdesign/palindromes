@@ -1,0 +1,13 @@
+<script>
+
+let isPalindrome = function (word) {
+	return word.split('')
+	.every((char, i) => {
+		return char === word[word.length - i - 1]
+	});
+}
+
+alert( 'kayak: '+isPalindrome('kayak') );
+alert( 'kayakk: '+isPalindrome('kayakk') );
+
+</script>
